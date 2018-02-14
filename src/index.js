@@ -4,7 +4,6 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import Routes from './router';
 import './index.css';
-import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 
