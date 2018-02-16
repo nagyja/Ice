@@ -1,12 +1,28 @@
 import React, { Component } from 'react';
+import SignIn from '../components/landingPage/sign_in';
+import SignUp from '../components/landingPage/sign_up';
 
 class LandingPage extends Component {
+    constructor () {
+        super()
+        this.state = {
+            signInIsHidden: true,
+            signUpIsHidden: true
+        }
+    }
+   
     onSignInClick(){
-        console.log ('this clicked');
+        this.setState({
+            signInIsHidden: !this.state.signInIsHidden,
+            signUpIsHidden: true
+          })
     }
 
     onSignUpClick(){
-        console.log ('that clicked');
+        this.setState({
+            signUpIsHidden: !this.state.signUpIsHidden,
+            signInIsHidden: true
+        })
     }
 
 
@@ -28,6 +44,11 @@ class LandingPage extends Component {
                     >
                     Sign Up
                 </button>
+
+                <div className='signIn-signUp'> 
+                    {!this.state.signInIsHidden && <SignIn />}
+                    {!this.state.signUpIsHidden && <SignUp />}
+                </div>
             </div>        
         );
     }
