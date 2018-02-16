@@ -1,16 +1,36 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
-import SignIn from "../components/landingPage/sign_in";
-import SignUp from "../components/landingPage/sign_up";
-=======
 
 class LandingPage extends Component {
+    onSignInClick(){
+        console.log ('this clicked');
+    }
+
+    onSignUpClick(){
+        console.log ('that clicked');
+    }
+
+
     render(){
         return(
-            <h1>This is the LandingPage Element</h1>
+            <div className='container'>
+                <h1 className='col-xs-12 text-xs-center'>Austin Digital Jobs</h1>
+                <h2 className='text-xs-center'>Ice-Breaker</h2>
+                <button 
+                    className='btn btn-primary'  
+                    onClick={this.onSignInClick.bind(this)}
+                    >
+                    Sign In
+                </button>
+                             
+                <button 
+                    className='btn btn-primary'  
+                    onClick={this.onSignUpClick.bind(this)}
+                    >
+                    Sign Up
+                </button>
+            </div>        
         );
     }
 }
 
 export default LandingPage;
->>>>>>> 5f7ff7b1a8375e6835de46b34daac96e6a320d17
