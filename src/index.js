@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import Routes from './router';
-import './index.css';
+import './style/index.css';
 import registerServiceWorker from './registerServiceWorker';
 
 
