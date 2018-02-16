@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 // import { createPost } from '../actions';
 
-class PostsNew extends Component {
+class SignUp extends Component {
     renderField(field){
         const { meta: { touched, error } } = field;
         const className = `form-group ${touched && error ? 'has-danger': ''}`
@@ -28,23 +28,23 @@ class PostsNew extends Component {
     }
     
     render() {
-        const { handleSubmit } = this.props;
+        // const { handleSubmit } = this.props;
     
         return (
             <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
                 <Field
-                    label="Title"
-                    name="title"
+                    label="Email"
+                    name="email"
                     component={this.renderField}
                 />
                 <Field
-                    label="Categories"                
-                    name="categories"
+                    label="Username"                
+                    name="username"
                     component={this.renderField}
                 />
                 <Field
-                    label="Content"                
-                    name="content"
+                    label="Password"                
+                    name="password"
                     component={this.renderField}
                 />
                 <Link to="/Home" className="btn btn-primary">SignUp</button>
@@ -62,13 +62,13 @@ function validate(values){
     //     errors.title = 'Title must be at least 3 characters'
     // }
     if(!values.title){
-        errors.title='Enter a title';
+        errors.title='Enter a Email';
     }
     if(!values.categories){
-        errors.categories = 'Enter some categories';
+        errors.categories = 'Enter a Username';
     }
     if(!values.content){
-        errors.content = 'Enter some content please';
+        errors.content = 'Enter a Password';
     }
 
 
@@ -79,7 +79,7 @@ function validate(values){
 
 export default reduxForm({
     validate,
-    form: 'PostsNewForm'
+    form: 'SignUp'
 })(
-    connect(null, { createPost })(PostsNew)
+    connect(null, {}(SignUp)
 );
