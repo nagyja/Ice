@@ -47,7 +47,7 @@ class SignUp extends Component {
                     name="password"
                     component={this.renderField}
                 />
-                <Link to="/Home" className="btn btn-primary">SignUp</button>
+                <Link to="/home" className="btn btn-primary">SignUp</Link>
                 <Link to="/" className="btn btn-danger">Cancel</Link>
             </form>
         );
@@ -81,5 +81,5 @@ export default reduxForm({
     validate,
     form: 'SignUp'
 })(
-    connect(null, {}(SignUp)
+    connect(null, {})(SignUp)
 );
