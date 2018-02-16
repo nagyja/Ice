@@ -28,24 +28,24 @@ class LandingPage extends Component {
 
     render(){
         return(
-            <div className='container'>
-                <h1 className='col-xs-12 text-xs-center'>Austin Digital Jobs</h1>
-                <h2 className='text-xs-center'>Ice-Breaker</h2>
+            <div className="container">
+                <h1 className="col-xs-12 text-xs-center">Austin Digital Jobs</h1>
+                <h2 className="text-xs-center">Ice-Breaker</h2>
                 <button 
-                    className='btn btn-primary'  
+                    className="btn btn-primary"  
                     onClick={this.onSignInClick.bind(this)}
                     >
                     Sign In
                 </button>
                              
                 <button 
-                    className='btn btn-primary'  
+                    className="btn btn-primary"  
                     onClick={this.onSignUpClick.bind(this)}
                     >
                     Sign Up
                 </button>
 
-                <div className='signIn-signUp'> 
+                <div className="signIn-signUp"> 
                     {!this.state.signInIsHidden && <SignIn />}
                     {!this.state.signUpIsHidden && <SignUp />}
                 </div>
