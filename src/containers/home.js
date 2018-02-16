@@ -43,7 +43,7 @@ class HomePage extends Component {
                     <div className="row">
                         <h1 className="col-md-12 text-center">Home</h1>
                     </div>
-                    <div className="row btn-group btn-group-justified">
+                    <div className="row btn-group d-flex">
                        
                         <button
                             className="btn btn-primary col-md-4"
@@ -69,7 +69,7 @@ class HomePage extends Component {
                             {!this.state.peopleListHidden && <PeopleList />}
                             {!this.state.profileHidden && <Profile />}                   
                         </div>
-                    
+                   
                     </div>
                
             </div>
