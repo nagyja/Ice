@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-// import { createPost } from '../actions';
 
 class SignUp extends Component {
     renderField(field){
@@ -28,7 +27,7 @@ class SignUp extends Component {
     }
     
     render() {
-        // const { handleSubmit } = this.props;
+        const { handleSubmit } = this.props;
     
         return (
             <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
@@ -47,7 +46,7 @@ class SignUp extends Component {
                     name="password"
                     component={this.renderField}
                 />
-                <Link to="/Home" className="btn btn-primary">SignUp</button>
+                <Link to="/home" className="btn btn-primary">SignUp</Link>
                 <Link to="/" className="btn btn-danger">Cancel</Link>
             </form>
         );
@@ -81,5 +80,5 @@ export default reduxForm({
     validate,
     form: 'SignUp'
 })(
-    connect(null, {}(SignUp)
+    connect(null, {})(SignUp)
 );
