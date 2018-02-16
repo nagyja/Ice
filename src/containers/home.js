@@ -40,32 +40,38 @@ class HomePage extends Component {
     render(){
         return(
             <div className="container">
-                <h1>Home</h1>
-                <button
-                    className="btn btn-primary"
-                    onClick={this.showEventList.bind(this)}
-                    >
-                    Events
-                </button>
-                <button
-                    className="btn btn-primary"
-                    onClick={this.showPeopleList.bind(this)}
-                    >
-                    People
-                </button>
-                <button
-                    className="btn btn-primary"
-                    onClick={this.showProfile.bind(this)}
-                    >
-                    Profile
-                </button>
+                    <div className="row">
+                        <h1 className="col-md-12 text-center">Home</h1>
+                    </div>
+                    <div className="row btn-group btn-group-justified">
+                       
+                        <button
+                            className="btn btn-primary col-md-4"
+                            onClick={this.showEventList.bind(this)}
+                            >
+                            Events
+                        </button>
+                        <button
+                            className="btn btn-primary col-md-4"
+                            onClick={this.showPeopleList.bind(this)}
+                            >
+                            People
+                        </button>
+                        <button
+                            className="btn btn-primary col-md-4"
+                            onClick={this.showProfile.bind(this)}
+                            >
+                            Profile
+                        </button>
 
-                <div>
-                    {!this.state.eventListHidden && <EventsList />}
-                    {!this.state.peopleListHidden && <PeopleList />}
-                    {!this.state.profileHidden && <Profile />}                   
-                </div>
-
+                        <div>
+                            {!this.state.eventListHidden && <EventsList />}
+                            {!this.state.peopleListHidden && <PeopleList />}
+                            {!this.state.profileHidden && <Profile />}                   
+                        </div>
+                    
+                    </div>
+               
             </div>
         );
     }
