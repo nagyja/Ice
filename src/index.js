@@ -6,12 +6,14 @@ import Routes from './router';
 import './style/index.css';
 import registerServiceWorker from './registerServiceWorker';
 
+import reducers from './reducers';
+
 
 ReactDOM.render(
 
-    <div>
+    <Provider store={createStore(reducers)}>
         <Routes />
-    </div>
+    </Provider>
 
 , document.getElementById('root'));
 registerServiceWorker();
