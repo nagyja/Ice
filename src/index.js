@@ -10,10 +10,7 @@ import reducers from './reducers';
 
 
 ReactDOM.render(
-
     <Provider store={createStore(reducers)}>
         <Routes />
-    </Provider>
-
-, document.getElementById('root'));
+    </Provider>, document.getElementById('root'));
 registerServiceWorker();
